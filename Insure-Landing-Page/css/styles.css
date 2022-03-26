@@ -176,3 +176,257 @@ nav .hamburger {
 nav .hamburger .close {
     display: none;
 }
+
+nav .hamburger.show .open {
+    display: none;
+}
+
+nav .hamburger.show .close {
+    display: block;
+}
+
+nav .flex {
+    flex-direction: row;
+}
+
+/* nav .img-wrapper {
+    text-align: left;
+} */
+
+nav ul {
+    display: none;
+}
+
+nav ul.show {
+    display: flex;
+    flex-direction:column;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    position: fixed;
+    top: 70px;
+    left: 0;
+    padding-top: 3.5em;
+    margin: 0;
+    background: url("../images/bg-pattern-mobile-nav.svg"), var(--very-dark-violet);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: contain;
+}
+
+nav ul.show a {
+    color: #fff;
+}
+
+nav ul.show a:hover,
+nav ul.show a:focus {
+    color: #fff;
+}
+
+nav ul.show .btn-ghost {
+    background-color: transparent;
+    border-color: #fff;
+}
+
+/*********** Hero Section Styles  *************/
+.hero {
+    margin-bottom: 8.75em;
+    padding-bottom: 6em;
+}
+
+.hero-image {
+    /* order: -1; */
+    width: calc(100% + 3em);
+}
+
+.hero-text {
+    order: 1;
+}
+
+.hero .subhead {
+    color: #fff;
+    margin-bottom: 2em;
+}
+
+
+/*********** Features Section Styles  *************/
+.features {
+    position: relative;
+    margin-bottom: 3.5em;
+}
+
+.features-line::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: calc(50% - 75px);
+    height: 1px;
+    width: 150px;
+    background-color: var(--light-grayish-violet);
+}
+
+.features .flex {
+    gap: 3.5em;
+}
+
+.card img {
+    margin: 0 auto;
+}
+
+/*********** How We Work Styles  *************/
+.how-we-work {
+    padding: 4.5em 1.5em;
+    margin-bottom: 8.75em;
+    background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right top;
+    
+}
+
+/*********** Footer Styles  *************/
+footer {
+    background: url("../images/bg-pattern-footer-mobile.svg") ,var(--very-light-gray);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding: 5.5em 0;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+
+}
+
+.social {
+    border-bottom: 1px solid hsl(0, 0%, 89%);
+    margin-bottom: 3em;
+}
+
+.social-media {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    padding:0 0 2.5em;
+}
+
+.social-link {
+    color: var(--dark-grayish-violet);
+    font-size: 1.5rem;
+}
+
+.social-link:hover,
+.social-link:focus {
+    color: var(--very-dark-violet);
+}
+
+.footer-links-header,
+.footer-links {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.footer-links-header {
+    display: inline-block;
+    font-size: 1rem;
+    color: var(--dark-grayish-violet);
+    margin-bottom: 2em;
+}
+
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+    gap: 1em;
+}
+
+.footer-links {
+    color: var(--dark-violet);
+    font-size: 0.8rem;
+}
+
+.footer-links:hover,
+.footer-links:focus {
+    text-decoration: underline;
+}
+
+/*********** Media Queries  *************/
+
+@media (min-width: 768px) {
+    .flex {
+        flex-direction: row;
+        gap: 2em;
+    }
+}
+
+.btn {
+    font-size: 0.8125rem;
+    padding: 0.6em 2em;
+}
+
+/* .hero-btn {
+    z-index: 3;
+} */
+
+   /***** Navigation Styles  ******/
+   nav .hamburger {
+       display: none;
+   }
+
+   nav .hamburger:focus {
+    outline: none;
+   }
+
+   nav ul {
+       display: flex;
+   }
+
+   nav li a {
+       color: var(--dark-grayish-violet);
+       font-size: 0.8125rem;
+   }
+   
+   .nav-btn-ghost {
+       color: var(--very-dark-violet);
+       border-color: var(--very-dark-violet);
+   }
+
+   /***** Hero Section Styles  ******/
+
+   .hero {
+       padding: 4em 0 3em;
+   }
+
+   .hero::before {
+       content: '';
+       background-image: url("../images/bg-pattern-intro-left-desktop.svg");
+       background-position: bottom left;
+       background-repeat: no-repeat;
+       z-index: 0;
+       position: absolute;
+        top: 5em;
+        left: 0;
+        height: 390px;
+        width: 100%;
+   }
+
+   .hero::after {
+       content: '';
+       position: absolute;
+       top: 5em;
+       left: 0;
+       height: 390px;
+       width: 100%;
+       z-index: 1;
+       background-image: url("../images/bg-pattern-intro-right-desktop.svg");
+       background-position: top right;
+       background-repeat: no-repeat;
+   }
+
+   .hero-text {
+       order: 0;
+       text-align: left;
+   }
