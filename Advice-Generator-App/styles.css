@@ -1,0 +1,100 @@
+:root {
+    /* Primary Colors */
+    --clr-light-cyan: hsl(193, 38%, 86%);
+    --clr-neon-green: hsl(150, 100%, 66%);
+    /* Neutral Colors */
+    --clr-dark-blue: hsl(219, 22%, 16%);
+    --clr-grayish-blue: hsl(217, 19%, 38%);
+    --clr-dark-grayish-blue: hsl(217, 19%, 24%); 
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/************* General Layout ************/
+body {
+    margin: 12em auto;
+    background-color: var(--clr-dark-blue);
+    font-family: "Manrope", sans-serif;
+}
+
+/************* Typography ************/
+h1 {
+    color: var(--clr-light-cyan);
+    font-size: 1.5rem;
+    letter-spacing: -0.26px;
+    margin-bottom: 2.5rem;
+}
+
+p {
+    color: var(--clr-neon-green);
+    font-size: 0.6875rem;
+    letter-spacing: 3.5px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+button {
+    background-color: var(--clr-neon-green);
+    border: 0;
+    border-radius: 100px;
+    padding: 1em;
+    transform: translateY(2em);
+}
+
+button:hover,
+button:focus {
+    cursor: pointer;
+    box-shadow: 0 0 40px var(--clr-neon-green);
+}
+
+.card {
+    background-color: var(--clr-dark-grayish-blue);
+    border-radius: 10px;
+    padding: 2.5em 1.5em 0;
+    margin: auto;
+    text-align: center;
+    width: 21.5em;
+}
+
+.divider-mobile {
+    display: block;
+    margin: 0 auto;
+}
+
+.divider-desktop {
+    display: none;
+    margin: 0 auto;
+}
+
+/************* Footer Styles ************/
+footer {
+    color: var(--clr-light-cyan);
+    text-align: center;
+}
+
+footer a {
+    color: var(--clr-neon-green);
+    text-decoration: none;
+}
+
+/************* Media Queries ************/
+@media (min-width: 37.5em) {
+    p{
+        font-size: 0.8125rem;
+        letter-spacing: 4.1px;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        letter-spacing: -0.3px;
+    }
+
+    .card {
+        margin: 14rem auto  0;
+        padding: 3em 3em 0;
+    }
+}
